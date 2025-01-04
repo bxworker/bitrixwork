@@ -1,0 +1,5 @@
+{
+    "autoload": {
+        "psr-4": {"Project\\": "public/local/php_interface/Project"}
+    }
+}
