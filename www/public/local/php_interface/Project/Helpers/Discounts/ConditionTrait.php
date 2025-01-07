@@ -6,5 +6,5 @@ namespace Project\Helpers\Discounts;
 
 trait ConditionTrait
 {
-    use ControlTrait;
+    use CtrlTrait;
 }

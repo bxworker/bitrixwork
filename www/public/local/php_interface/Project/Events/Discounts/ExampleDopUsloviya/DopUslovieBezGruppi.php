@@ -5,11 +5,11 @@ declare(strict_types=1);
 namespace Project\Events\Discounts\ExampleDopUsloviya;
 
 use CSaleCondCtrl;
-use Project\Helpers\Discounts\ControlTrait;
+use Project\Helpers\Discounts\CtrlTrait;
 
 class DopUslovieBezGruppi extends CSaleCondCtrl
 {
-    use ControlTrait;
+    use CtrlTrait;
 
     public static function GetControlDescr(): array
     {
@@ -28,7 +28,7 @@ class DopUslovieBezGruppi extends CSaleCondCtrl
     {
         $result = array(
             'controlId' => static::GetControlID(),
-            'label' => static::GetControlBase(),
+            'label' => static::GetControlBaseId(),
             'showIn' => static::getShowIn($arParams['SHOW_IN_GROUPS']),
         );
 

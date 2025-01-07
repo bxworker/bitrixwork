@@ -5,15 +5,15 @@ declare(strict_types=1);
 namespace Project\Events\Discounts\ExampleDopUsloviya;
 
 use CSaleCondCtrl;
-use Project\Helpers\Discounts\ControlTrait;
+use Project\Helpers\Discounts\CtrlTrait;
 
 class DopUslovieSGruppoy extends CSaleCondCtrl
 {
-    use ControlTrait;
+    use CtrlTrait;
 
     public static function GetControlID()
     {
-        $base = static::GetControlBase();
+        $base = static::GetControlBaseId();
 
         return [
             $base . '1',
@@ -27,7 +27,7 @@ class DopUslovieSGruppoy extends CSaleCondCtrl
 
         for ($i = 1; $i <= 2; $i++) {
             $result[] = [
-                'ID' => static::GetControlBase() . $i,
+                'ID' => static::GetControlBaseId() . $i,
                 'GetControlShow' => [__CLASS__, 'GetControlShow'],
                 'GetConditionShow' => [__CLASS__, 'GetConditionShow'],
                 'Parse' => [__CLASS__, 'Parse'],
@@ -44,7 +44,7 @@ class DopUslovieSGruppoy extends CSaleCondCtrl
     {
         $result = array(
             'controlId' => static::GetControlID(),
-            'label' => static::GetControlBase(),
+            'label' => static::GetControlBaseId(),
             'showIn' => static::getShowIn($arParams['SHOW_IN_GROUPS']),
         );
 
