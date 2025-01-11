@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Project\Helpers;
 
-class Helpers
+final class Helpers
 {
     public static function rootNamespacePart(string $className): string
     {

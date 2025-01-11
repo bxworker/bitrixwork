@@ -7,7 +7,7 @@ namespace Project\Helpers\Discounts;
 use Bitrix\Sale\Discount\Actions;
 use CSaleActionCtrlBasketGroup;
 
-class GenerateHelper
+final class GenerateHelper
 {
     protected static array $resolveUnitMap = [
         CSaleActionCtrlBasketGroup::VALUE_UNIT_PERCENT => Actions::VALUE_TYPE_PERCENT,
