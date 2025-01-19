@@ -2,6 +2,7 @@
 
 use Bitrix\Main\EventManager;
 use Bitrix\Main\Loader;
+use Project\Discounts\Ctrls\CondCtrl;
 use Project\Discounts\Ctrls\CondCtrlAct;
 use Project\Discounts\Ctrls\DiscountCtrlAct;
 use Project\Discounts\ExtendOrderData\IblockData;
@@ -20,4 +21,6 @@ $eventManager = EventManager::getInstance();
     $eventManager->addEventHandler('sale', 'OnCondSaleActionsControlBuildList', [CondCtrlAct::class, 'GetControlDescr']);
     $eventManager->addEventHandler('sale', 'onExtendOrderData', [IblockData::class, 'extendOrderData']);
     $eventManager->addEventHandler('sale', 'onExtendOrderData', [SectionData::class, 'extendOrderData']);
+
+    $eventManager->addEventHandler('sale', 'OnCondSaleControlBuildList', [CondCtrl::class, 'GetControlDescr']);
 })();
